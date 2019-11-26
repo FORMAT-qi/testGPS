@@ -15,6 +15,7 @@
 		253E17811E34922B00425821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253E177F1E34922B00425821 /* LaunchScreen.storyboard */; };
 		253E17891E34927900425821 /* test.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 253E17881E34927900425821 /* test.gpx */; };
 		253E178C1E3494C900425821 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253E178B1E3494C900425821 /* LocationController.m */; };
+		25D13322238D10EB008E6639 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D13321238D10EB008E6639 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		253E17881E34927900425821 /* test.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.gpx; sourceTree = SOURCE_ROOT; };
 		253E178A1E3494C900425821 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		253E178B1E3494C900425821 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		25D13321238D10EB008E6639 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D13322238D10EB008E6639 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +52,7 @@
 			children = (
 				253E17701E34922B00425821 /* test */,
 				253E176F1E34922B00425821 /* Products */,
+				25D13320238D10EB008E6639 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +91,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		25D13320238D10EB008E6639 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25D13321238D10EB008E6639 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,8 +130,8 @@
 				TargetAttributes = {
 					253E176D1E34922B00425821 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6AR394258A;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 9W2SHLVZPY;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -128,6 +140,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -283,14 +296,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 6AR394258A;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9W2SHLVZPY;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.jsq;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zealfi.testWechar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "76789219-5b48-4699-b3ff-92f9d02fc8b7";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -298,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -325,6 +341,7 @@
 				253E17871E34922B00425821 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
