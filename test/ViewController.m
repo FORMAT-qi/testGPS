@@ -22,7 +22,7 @@
     
     //http://lbs.amap.com/console/show/picker
     //第二步转换成Wgs坐标系统<wpt lat="23.134762" lon="113.321602">
-    CLLocation *loca = [[CLLocation alloc]initWithLatitude:23.132175 longitude:113.32703];
+    CLLocation *loca = [[CLLocation alloc]initWithLatitude:31.215257 longitude:121.53381];
     CLLocationCoordinate2D c2d = [LocationController gcj02ToWgs84:loca.coordinate];
     NSLog(@"转换后： %f  %f",c2d.latitude,c2d.longitude);
     
@@ -38,7 +38,12 @@
 //    _locationManager.distanceFilter =10.0f;
 //    //开始定位
 //    [_locationManager startUpdatingLocation];
-    
+    UILabel * lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 300, 100)];
+    lable.numberOfLines = 2;
+    lable.text = @"模拟定位已启动，不要断开连接，不要关闭程序，按home键返回桌面";
+    lable.center = self.view.center;
+    lable.textColor = [UIColor redColor];
+    [self.view addSubview:lable];
 }
 //-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
 //
